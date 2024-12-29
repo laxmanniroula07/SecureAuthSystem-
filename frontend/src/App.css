@@ -1,0 +1,469 @@
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.login-container ,.signup-container{
+  width: 95vw;
+  margin: 20px;
+  height: 93vh;
+  display: flex;
+  border-radius: 14px;
+}
+
+
+.image-container{
+  width: 60%;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+
+}
+
+form {
+  background-color: #90a1b3;
+  width: 40%;
+  align-items: center;
+}
+.form2{
+  background-color: #90a1b3;
+  width: 100%;
+  align-items: center;
+
+}
+
+form h2 {
+
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  
+}
+
+form h3{
+  font-size: 1.4rem;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 5px;
+ 
+}
+
+
+
+form p {
+  font-size: 1.4rem;
+  padding: 0;
+}
+
+label {
+  margin:5px 5px 5px 15px;
+  font-size: 1.3rem;
+  font-weight: 400;
+
+}
+
+input, select {
+  margin:5px 5px 8px 13px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  width: 90%;
+  border-radius: 10px;
+  box-sizing: border-box; 
+}
+
+button {
+  width: 80%;
+    margin: 10px 35px 0px 30px;
+    padding: 10px 1px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #032d5b;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.toggle-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toggle-link  p{
+  font-size:18px ;
+}
+.toggle-link, a {
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 10px;
+}
+
+.forget-password
+{
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 20px;
+}
+
+
+/*
+.otp-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+ 
+}
+
+
+.otp-popup{
+  background-color: #4345b3;
+  height: fit-content;
+  width: 30%;
+
+}
+.otp-popup-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.otp-popup-content h2 {
+  margin-bottom: 10px;
+}
+
+.otp-popup-content p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.otp-input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.otp-input-container input {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.otp-popup-content button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.otp-popup-content button:hover {
+  background-color: #0056b3;
+}
+*/
+.error-message, .success-message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.success-message {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+
+.input-container {
+  position: relative;
+  width: 100%;
+ 
+}
+/*
+.otpform{
+  width:85%
+}
+
+.input-icon {
+  position: absolute;
+  left: 0px; 
+  top: 40%;
+  height: 1.9rem;
+  width: 1.9rem;
+  transform: translateY(-50%);
+  color: black;
+}*/
+
+.password-toggle-icon {
+  position: absolute;
+  right: 35px; 
+  top: 43%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: black;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-input input {
+  width: 90%;
+  padding-right: 30px; 
+}
+
+.password-input .iconify {
+  position: absolute;
+  right: 50px;
+  top: 43%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  margin-left: 30px;
+}
+
+.success-message {
+  color: blue;
+  margin-left: 30px;
+}
+.status-message {
+  color: black;
+  margin-left: 30px;
+}
+
+
+
+.password-strength-meter {
+  margin: 12px 25px 8px 35px;
+  position: relative;
+  height: 6px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.strength-bar {
+ width: 90%;
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Color codes based on strength */
+.strength-0 .strength-bar { background-color: White; }
+.strength-1 .strength-bar { background-color: red; }
+.strength-2 .strength-bar { background-color:darkorange; }
+.strength-3 .strength-bar { background-color: blue; }
+.strength-4 .strength-bar { background-color: green; }
+
+
+.strength-text {
+  position: relative;
+  top: -27px;
+  right: 0;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.strength-bar::after {
+  content: attr(data-percentage);
+  position: absolute;
+  right: 0;
+  top: -20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Matching text colors */
+.strength-0 .strength-text, .strength-0 .strength-bar::after { color: White; }
+.strength-1 .strength-text, .strength-1 .strength-bar::after { color: red; }
+.strength-2 .strength-text, .strength-2 .strength-bar::after { color: darkorange; }
+.strength-3 .strength-text, .strength-3 .strength-bar::after { color: blue; }
+.strength-4 .strength-text, .strength-4 .strength-bar::after { color: green; }
+
+
+
+/* ... (previous styles) ... */
+
+.forget-password-container,
+.email-verification-container,
+.reset-password-container {
+  max-width: 400px;
+  margin: 100px auto;
+  background-color: #90a1b3;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.forget-password-container form,
+.email-verification-container form,
+.reset-password-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.forget-password-container h2,
+.email-verification-container h2,
+.reset-password-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.forget-password-container p,
+.email-verification-container p,
+.reset-password-container p {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+
+.input-wrapper input {
+  padding-left: 35px;
+}
+
+.message {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+  color:red;
+}
+
+.verification-code-inputs {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.verification-code-inputs input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 18px;
+  margin: 5px ;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.verification-code-inputs input:focus {
+  outline: none;
+  border-color: #0026ff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.button-container button {
+  font-size: 1rem;
+  flex: 1;
+  padding: 10px 25px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* 
+.button-container button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+} */
+
+.password-feedback {
+  font-size: 15px;
+  color: blue;
+  padding: 3px 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.otp-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.otp-popup {
+  background-color: rgb(145, 137, 137);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+
+
+.verification-code-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.verification-code-inputs input {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0 5px;
+}

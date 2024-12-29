@@ -1,0 +1,130 @@
+ body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+}
+
+.captcha-container {
+    border: 2px solid black;
+    padding: 20px;
+    width: 400px;
+    max-width: 100%;
+    background-color: white;
+}
+
+.captcha-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    margin: 0;
+}
+
+h3 {
+    text-align: left;
+    margin-top: 0;
+}
+
+.sample-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sample-image img {
+    width: 200px;
+    height: auto;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.verify-button {
+    width: 95%;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px 15px 5px 10px;
+}
+
+.verify-button.active {
+    background-color: #115813;
+}
+
+.check-captcha {
+    border: 2px solid rgb(128, 127, 127);
+    border-radius: 8px;
+    display: flex;
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-captcha input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+}
+
+.check-captcha label {
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Dialog Overlay to center the dialog box */
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1500; 
+}
+
+
+.dialog-box {
+    background-color: rgb(61, 58, 58);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    max-width: 400px;
+    width: 90%;
+    
+}
+
+
+.dialog-box button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
